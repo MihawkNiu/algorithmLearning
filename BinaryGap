@@ -1,0 +1,29 @@
+class Solution {
+    public int solution(int N) {
+        // write your code in Java SE 8
+        String binaryStr = Integer.toBinaryString(N);
+        
+        int len = 0;
+        int tem_len = 0;
+        int start = 0;
+        
+        for(int i=0;i<binaryStr.length();i++){
+            
+            if(binaryStr.charAt(i) == "1".charAt(0)){
+                tem_len = i - start - 1;
+                start = i;
+                if(tem_len > len){
+                    len=tem_len;
+                }
+            }
+        }
+        
+        if(len > 0){
+            return len;
+        } else {
+            return 0;
+        }
+    }
+}
+
+https://codility.com/demo/results/trainingBVC4M9-T5Y/
