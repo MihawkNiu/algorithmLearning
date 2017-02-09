@@ -1,0 +1,12 @@
+class Solution {
+    public int solution(int X, int Y, int D) {
+        // write your code in Java SE 8
+        int step = 0;
+        //double temp = (double)(Y-X)/D;
+        //System.out.println(temp);
+        step = (int)Math.ceil((double)(Y-X)/D);
+        return step;
+    }
+}
+
+https://codility.com/demo/results/trainingGWJSD5-FSR/
